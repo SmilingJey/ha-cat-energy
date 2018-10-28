@@ -1,0 +1,30 @@
+.training-promo {
+  position: relative;
+
+  &__header {
+    position: relative;
+    z-index: 1;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 60px;
+    line-height: 60px;
+    width: 450px;
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    width: 450px;
+    margin-bottom: 50px;
+  }
+
+  &__image {
+    position: absolute;
+    top: -75px;
+    left: 370px;
+  }
+}

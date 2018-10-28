@@ -1,0 +1,35 @@
+.main-menu {
+  &__toggle {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  &__item {
+    padding-left: 35px;
+
+    a {
+      text-decoration: none;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 20px;
+      line-height: 25px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    &--active a::after {
+      position: relative;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+      top: 5px;
+    }
+  }
+}
