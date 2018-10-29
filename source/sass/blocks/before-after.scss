@@ -1,45 +1,85 @@
 .before-after {
-  &__images {
-    width: 650px;
-    position: relative;
-
-    p {
-      font-size: 20px;
-      line-height: 20px;
-      font-family: "Oswald", "Arial", sans-serif;
-      text-transform: uppercase;
-    }
-  }
+  position: relative;
+  padding-bottom: 100px;
 
   &__before {
     position: absolute;
+    width: 365px;
+    overflow: hidden;
 
     img {
-      position: absolute;
-      width: 690px;
       max-width: none;
-      height: auto;
-    }
-
-    p {
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 690px;
     }
   }
 
   &__after {
-    img {
-      position: absolute;
-      width: 690px;
-      max-width: none;
-      height: auto;
-    }
+    overflow: hidden;
+    width: 325px;
+    float: right;
 
-    p {
-      position: absolute;
-      top: 0;
-      left: 0;
+    img {
+      float: right;
+      max-width: none;
+      width: 690px;
     }
   }
+
+  &__label {
+    position: absolute;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "Oswald", "Arial", sans-serif;
+    text-transform: uppercase;
+
+    &--before {
+      left: 80px;
+      bottom: 50px;
+    }
+
+    &--after {
+      right: 40px;
+      bottom: 50px;
+    }
+  }
+
+  &__control {
+    position: absolute;
+    bottom: 63px;
+    left: 152px;
+  }
+
+  &__bar {
+    width: 426px;
+    height: 6px;
+    border-radius: 2px;
+    background-color: #dcdcdc;
+  }
+
+  &__toggle {
+    position: relative;
+    margin-left: 197px;
+    margin-top: -20px;
+    width: 34px;
+    height: 34px;
+    background-color: #ffffff;
+    border: 1px solid #cecece;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: #68b738;
+      border-radius: 50%;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
 }

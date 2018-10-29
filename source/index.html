@@ -127,8 +127,8 @@
             </div>
           </div>
           <div class="example__images before-after">
+            <p class="before-after__label before-after__label--before">Было</p>
             <div class="before-after__before">
-              <p>Было</p>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1299px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
@@ -138,15 +138,15 @@
                 <img src="img/before-desktop@1x.png" srcset="img/before-desktop@2x.png 2x" alt="до Cat Energy">
               </picture>
             </div>
+            <p class="before-after__label before-after__label--after">Стало</p>
             <div class="before-after__after">
-              <p>Стало</p>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1299px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/after-mobile@1x.png 1x, img/after-mobile@2x.png.jpg 2x">
                 <source media="(max-width: 1299px)" srcset="img/after-tablet@1x.jpg 1x, img/after-tablet@2x.jpg 2x">
-                <img src="img/after-desktop@1x.png" srcset="img/after-desktop@2x.png 2x" alt="до Cat Energy">
+                <img src="img/after-desktop@1x.png" srcset="img/after-desktop@2x.png 2x" alt="после Cat Energy">
               </picture>
             </div>
             <div class="before-after__control">
@@ -157,11 +157,11 @@
         </div>
       </section>
       <section class="contacts">
-        <div>
+        <div class="contacts__box">
           <h2></h2>
           <p>ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург</p>
         </div>
-        <div></div>
+        <div class="contacts__map" id="google-map"></div>
       </section>
     </main>
     <footer class="page-footer">
@@ -197,5 +197,7 @@
         </p>
       </div>
     </footer>
+    <script src="js/scripts.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg3_kj2bCeG3cxQWRRczYl1aCpbV5cKK4&callback=initMap"></script>
   </body>
 </html>

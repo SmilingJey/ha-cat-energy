@@ -20,9 +20,7 @@ var cheerio = require('gulp-cheerio');
 const htmlmin = require('gulp-htmlmin');
 
 var concatScripts = [
-  'build/js/yandex-map.js',
-  'build/js/main-menu.js',
-  'build/js/modal-basket.js'
+  'build/js/google-map.js'
 ];
 
 var svgSpriteImages = [
@@ -124,7 +122,7 @@ gulp.task('minjs', function () {
     .pipe(gulp.dest('build/js/'));
 });
 
-gulp.task('js', gulp.series(/*'concatjs',*/ 'minjs'));
+gulp.task('js', gulp.series('concatjs', 'minjs'));
 
 gulp.task('copy', function () {
   return gulp.src([
@@ -156,9 +154,9 @@ gulp.task('server', function () {
   });
 
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
-  //gulp.watch('source/js/**/*.js').on('change', gulp.series('copy', 'js', 'reloadPage'));
-  //gulp.watch(svgSpriteImages).on('change', gulp.series('copy', 'html', 'reloadPage'));
+  gulp.watch('source/js/**/*.js').on('change', gulp.series('copy', 'js', 'reloadPage'));
   gulp.watch('source/**/*.html').on('change', gulp.series('html', 'reloadPage'));
+  //gulp.watch(svgSpriteImages).on('change', gulp.series('copy', 'html', 'reloadPage'));
   //gulp.watch('source/img/**').on('change', gulp.series('img', 'reloadPage'));
 });
 

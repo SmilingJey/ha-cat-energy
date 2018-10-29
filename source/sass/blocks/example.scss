@@ -1,6 +1,6 @@
 .example {
-  background-image: linear-gradient(to bottom, white 170px, #eaeaea 170px),
-    linear-gradient(to bottom, white 170px, $color-grey 170px);
+  background-image: linear-gradient(to bottom, white 190px, #eaeaea 190px),
+    linear-gradient(to bottom, white 190px, $color-grey 190px);
   background-position: calc(100% + 325px) 0, 0 0;
   background-size: 50% auto, 100% auto;
   background-repeat: no-repeat, no-repeat;
@@ -9,13 +9,13 @@
     display: flex;
     max-width: 1300px;
     margin: 0 auto 0;
-    padding: 0 40px 0;
+    padding-left: 40px;
     align-items: stretch;
   }
 
   h2 {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 55px;
     margin-bottom: 145px;
     font-weight: normal;
     font-size: 60px;
@@ -24,7 +24,7 @@
   }
 
   &__desc {
-    width: 610px;
+    width: 570px;
   }
 
   &__text {
@@ -35,7 +35,7 @@
   &__result {
     display: flex;
     flex-wrap: wrap;
-    width: 570px;
+    width: 500px;
     margin-bottom: 50px;
   }
 
@@ -88,7 +88,6 @@
 
   &__images {
     position: relative;
-    outline: 1px solid red;
-    width: 650px;
+    width: 690px;
   }
 }
