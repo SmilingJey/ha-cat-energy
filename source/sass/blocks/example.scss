@@ -1,0 +1,94 @@
+.example {
+  background-image: linear-gradient(to bottom, white 170px, #eaeaea 170px),
+    linear-gradient(to bottom, white 170px, $color-grey 170px);
+  background-position: calc(100% + 325px) 0, 0 0;
+  background-size: 50% auto, 100% auto;
+  background-repeat: no-repeat, no-repeat;
+
+  &__inner {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto 0;
+    padding: 0 40px 0;
+    align-items: stretch;
+  }
+
+  h2 {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 145px;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 60px;
+    font-family: "Oswald", "Arial", sans-serif;
+  }
+
+  &__desc {
+    width: 610px;
+  }
+
+  &__text {
+    width: 435px;
+    margin-bottom: 65px;
+  }
+
+  &__result {
+    display: flex;
+    flex-wrap: wrap;
+    width: 570px;
+    margin-bottom: 50px;
+  }
+
+  &__result-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 162px;
+    min-height: 71px;
+    margin-right: 40px;
+    margin-bottom: 45px;
+    padding: 10px;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+  }
+
+  &__result-name {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap;
+    background-color: $color-grey;
+    transform: translateX(-50%);
+  }
+
+  &__result-value {
+    margin: 0;
+    font-size: 30px;
+    line-height: 37px;
+    font-family: "Oswald", "Arial", sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__result-price {
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "Oswald", "Arial", sans-serif;
+    text-transform: uppercase;
+
+    span {
+      margin-right: 60px;
+    }
+  }
+
+  &__images {
+    position: relative;
+    outline: 1px solid red;
+    width: 650px;
+  }
+}

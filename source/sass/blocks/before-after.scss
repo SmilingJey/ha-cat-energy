@@ -1,84 +1,45 @@
 .before-after {
-  background-image: linear-gradient(to bottom, white 160px, $color-grey 160px);
-
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1300px;
-    margin: 0 auto 0;
-    padding: 0 40px 0;
-  }
-
-  h2 {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 80px;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 60px;
-    font-family: "Oswald", "Arial", sans-serif;
-  }
-
-  &__desc {
-    width: 610px;
-  }
-
-  &__text {
-    width: 435px;
-    margin-top: 70px;
-    margin-bottom: 65px;
-  }
-
-  &__result {
-    display: flex;
-    flex-wrap: wrap;
-    width: 435px;
-    margin-bottom: 50px;
-  }
-
-  &__result-box {
+  &__images {
+    width: 650px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 162px;
-    min-height: 71px;
-    margin-right: 40px;
-    margin-bottom: 45px;
-    padding: 10px;
-    border: 1px solid #cdcdcd;
-    border-radius: 5px;
+
+    p {
+      font-size: 20px;
+      line-height: 20px;
+      font-family: "Oswald", "Arial", sans-serif;
+      text-transform: uppercase;
+    }
   }
 
-  &__result-name {
+  &__before {
     position: absolute;
-    bottom: -7px;
-    left: 50%;
-    display: block;
-    margin: 0;
-    padding: 0 10px;
-    font-size: 14px;
-    line-height: 14px;
-    white-space: nowrap;
-    background-color: $color-grey;
-    transform: translateX(-50%);
+
+    img {
+      position: absolute;
+      width: 690px;
+      max-width: none;
+      height: auto;
+    }
+
+    p {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 
-  &__result-value {
-    margin: 0;
-    font-size: 30px;
-    line-height: 37px;
-    font-family: "Oswald", "Arial", sans-serif;
-  }
+  &__after {
+    img {
+      position: absolute;
+      width: 690px;
+      max-width: none;
+      height: auto;
+    }
 
-  &__result-price {
-    font-size: 20px;
-    line-height: 20px;
-    font-family: "Oswald", "Arial", sans-serif;
-    text-transform: uppercase;
-
-    span {
-      margin-right: 60px;
+    p {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 }
