@@ -1,0 +1,39 @@
+.page-footer {
+  background-color: $color-grey;
+
+  &__links {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    padding: 40px 40px 30px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: 0;
+    width: 200px;
+  }
+
+  &__social {
+    padding-right: 60px;
+  }
+
+  &__copyright {
+    width: 200px;
+    margin-right: -8px;
+  }
+
+  &__copyright-link {
+    float: right;
+    text-decoration: none;
+    color: $color-footer;
+
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 15px;
+    }
+  }
+}

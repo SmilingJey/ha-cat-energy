@@ -29,6 +29,8 @@ $retina-dppx: 1.5dppx;
 $main-color: #68b738;
 $main-color-active: #5eaa2f;
 $color-grey: #f2f2f2;
+$color-footer: #444444;
+
 
 *,
 *::before,
@@ -65,3 +67,5 @@ img {
 @import "blocks/before-after.scss";
 @import "blocks/example.scss";
 @import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";

@@ -1,8 +1,8 @@
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('google-map'), {
-    zoom: 16,
-    center: new google.maps.LatLng(59.938616, 30.323014),
+    zoom: 17,
+    center: new google.maps.LatLng(59.938716, 30.319347),
     mapTypeId: 'roadmap'
   });
 
