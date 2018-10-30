@@ -51,10 +51,9 @@ img {
   height: auto;
 }
 
-@media (min-width: $tablet-width) {
-}
-
-@media (min-width: $mobile-width) {
+@media (max-width: $mobile-width) {
+  font-size: 14px;
+  line-height: 18px;
 }
 
 @import "blocks/visually-hidden.scss";
