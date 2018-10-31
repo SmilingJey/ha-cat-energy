@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -30,6 +31,25 @@
       height: 2px;
       background-color: #ffffff;
       top: 5px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .main-menu {
+    &__item {
+      padding-left: 35px;
+
+      a {
+        font-size: 18px;
+        line-height: 24px;
+        color: #000000;
+      }
+
+      &--active a::after {
+        background-color: $main-color;
+        top: 5px;
+      }
     }
   }
 }

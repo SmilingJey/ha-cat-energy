@@ -3,7 +3,8 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('google-map'), {
     zoom: 17,
     center: new google.maps.LatLng(59.938716, 30.319347),
-    mapTypeId: 'roadmap'
+    mapTypeId: 'roadmap',
+    disableDefaultUI: true
   });
 
   var marker = new google.maps.Marker({

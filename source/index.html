@@ -4,16 +4,14 @@
     <meta charset="utf-8">
     <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
-    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/ofi.min.js"></script>
+    <script src="js/polyfills/ofi.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=17ceedee-6a89-4b21-bc3e-f4ae5e5d795a&lang=ru_RU">
     </script>
     <script>
       document.createElement("picture");
     </script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="js/polyfills/picturefill.min.js" async></script>
   </head>
   <body>
 
@@ -69,7 +67,7 @@
         <h2 class="visually-hidden">Категории товаров</h2>
         <div class="categories__item">
           <div class="categories__icon categories__icon--cat-slim">
-            <img src="img/icon-cat-slim.svg" alt="категория похудение" width="70" height="97">
+            <img src="img/icon-cat-slim.svg" alt="категория похудение" >
           </div>
           <h3>Похудение</h3>
           <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
@@ -77,7 +75,7 @@
         </div>
         <div class="categories__item">
           <div class="categories__icon categories__icon--cat-pro">
-            <img src="img/icon-cat-pro.svg" alt="категория похудение" width="137" height="56">
+            <img src="img/icon-cat-pro.svg" alt="категория похудение" >
           </div>
           <h3>Набор Массы</h3>
           <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>

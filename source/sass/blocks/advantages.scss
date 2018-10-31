@@ -27,6 +27,8 @@
     flex-grow: 1;
     width: 25%;
     padding: 0 40px 40px;
+    min-width: 250px;
+    margin-bottom: 40px;
 
     &::before {
       content: counter(adv-counter);
@@ -37,7 +39,7 @@
       line-height: 281px;
       color: $color-grey;
       top: -45px;
-      left: 150px;
+      left: 50%;
       z-index: -1;
     }
   }
@@ -50,5 +52,37 @@
     height: 80px;
     margin-bottom: 35px;
     background-color: $main-color;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .advantages {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 30px;
+
+
+    h2 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    p {
+      max-width: 250px;
+    }
+
+    &__list {
+      margin-bottom: -30px;
+    }
+
+    &__item {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 50%;
+      margin-bottom: 70px;
+
+      &::before {
+        left: 40%;
+      }
+    }
   }
 }

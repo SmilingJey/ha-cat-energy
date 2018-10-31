@@ -1,5 +1,8 @@
 var baBar = document.querySelector('.before-after__bar');
-var baToogle = document.querySelector('.before-after__toggle');
+var baToggle = document.querySelector('.before-after__toggle');
+
+var baBeforeImage = document.querySelector('.before-after__before');
+var baAfterImage = document.querySelector('.before-after__after');
 
 function getCoords(elem) {
   var box = elem.getBoundingClientRect();
@@ -9,25 +12,47 @@ function getCoords(elem) {
   };
 }
 
-if (baBar && baToogle) {
-  baToogle.addEventListener("mousedown", function(evt){
+if (baBar && baToggle && baBeforeImage && baAfterImage) {
+  function baBackgroundPosition() {
+    var example = document.querySelector('.example');
+    var bgPos =  getCoords(baToggle).left - getCoords(example).left + baToggle.offsetWidth/2;
+    example.style.backgroundPosition = bgPos + 'px 0, 0 0';
+
+    var bgWidth = example.offsetWidth - bgPos;
+    example.style.backgroundSize = bgWidth + 'px auto, 100% auto';
+  }
+
+  baToggle.addEventListener("mousedown", function(evt){
     evt.preventDefault();
 
-    var toogleCoords = getCoords(baToogle);
+    var toggleCoords = getCoords(baToggle);
     var barCoords = getCoords(baBar);
-    var shiftX = evt.pageX - toogleCoords.left;
+    var shiftX = evt.pageX - toggleCoords.left;
 
     var documentMouseMove = function(evt){
       evt.preventDefault();
+      var newLeft = evt.pageX - barCoords.left - shiftX;
+      var min = 0;
+      var max = baBar.offsetWidth - baToggle.offsetWidth;
+      if (newLeft < min) newLeft = min;
+      if (newLeft > max) newLeft = max;
+      baToggle.style.marginLeft = newLeft + 'px';
 
-      var minX = barCoords.left - toogleCoords.offsetWidth/2;
-      var maxX = barCoords.left +  barCoords.offsetWidth + toogleCoords.offsetWidth/2;
+      var baBeforeImageCoords = getCoords(baBeforeImage);
+      var baAfterImageCoords = getCoords(baAfterImage);
 
-      var newX = evt.pageX - shiftX - minX;
-      if (newX < minX) newX = minX;
-      if (newX > maxX) newX = maxX;
+      var percent = newLeft / max;
 
-      baToogle.style.marginLeft = newX;
+      console.log("baBeforeImageCoords.left " + baBeforeImageCoords.left);
+      console.log("barCoords.left " + barCoords.left);
+      baBeforeImage.style.width = barCoords.left - baBeforeImageCoords.left +
+                                  newLeft + baToggle.offsetWidth/2 + 'px';
+
+      baAfterImage.style.width = baAfterImageCoords.left + baAfterImage.offsetWidth -
+                                 (barCoords.left + baBar.offsetWidth) + baBar.offsetWidth -
+                                  newLeft - baToggle.offsetWidth/2 + 'px';
+
+      baBackgroundPosition();
     }
 
     document.addEventListener("mousemove",documentMouseMove, false);
@@ -38,4 +63,5 @@ if (baBar && baToogle) {
     });
   });
 
+  baBackgroundPosition();
 }

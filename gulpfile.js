@@ -188,7 +188,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('clean-no-img', function () {
-  return del(['build/**/*', '!build/img']);
+  return del(['build/**/*', '!build/img', '!build/img/**.*']);
 });
 
 /************************** LIVE RELOAD *************************************/
