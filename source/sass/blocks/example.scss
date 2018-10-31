@@ -96,10 +96,17 @@
 
 @media (max-width: $tablet-width) {
   .example {
+    background-image: linear-gradient(to bottom, rgba(1, 1, 1, 0) 600px, #eaeaea 600px),
+      linear-gradient(to bottom, rgba(1, 1, 1, 0) 600px, $color-grey 600px);
+
 
     &__inner {
       padding-left: 30px;
       padding-right: 30px;
+    }
+
+    h2 {
+      margin-bottom: 65px;
     }
 
     &__desc {
@@ -108,7 +115,32 @@
 
     &__text {
       width: 100%;
-      margin-bottom: 65px;
+      margin-bottom: 50px;
+    }
+
+    &__result {
+      width: 100%;
+      margin-bottom: 45px;
+    }
+
+    &__result-name {
+      background-color: #ffffff;
+    }
+
+    &__result-price {
+      margin-left: auto;
+      margin-top: 15px;
+
+      span {
+        display: block;
+        text-align: right;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__images {
+      margin: 0 auto 0;
     }
   }
 }

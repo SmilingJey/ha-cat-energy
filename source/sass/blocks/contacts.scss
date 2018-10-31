@@ -12,7 +12,7 @@
     z-index: 1;
     width: 570px;
     background-color: #ffffff;
-    padding: 45px 70px 50px;
+    padding: 45px 70px 40px;
     display: flex;
 
     h2 {
@@ -55,3 +55,26 @@
     }
   }
 }
+
+@media (max-width: $tablet-width) {
+  .contacts {
+    &__box-wrapper {
+      padding: 0;
+    }
+
+    &__box {
+      width: 100%;
+      position: static;
+
+      p {
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+
+    &__map {
+      position: static;
+    }
+  }
+}
+
