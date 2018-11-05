@@ -2,14 +2,14 @@
   position: relative;
 
   &__box-wrapper {
+    position: absolute;
+    z-index: 1;
     max-width: 1300px;
     margin: 0 auto;
     padding: 100px 40px 100px;
   }
 
   &__box {
-    position: relative;
-    z-index: 1;
     width: 570px;
     background-color: #ffffff;
     padding: 45px 70px 40px;
@@ -31,10 +31,9 @@
   }
 
   &__map {
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 400px;
+    overflow: hidden;
 
     a {
       display: none;
@@ -59,6 +58,7 @@
 @media (max-width: $tablet-width) {
   .contacts {
     &__box-wrapper {
+      position: static;
       padding: 0;
     }
 
@@ -70,10 +70,6 @@
         margin-left: auto;
         text-align: right;
       }
-    }
-
-    &__map {
-      position: static;
     }
   }
 }

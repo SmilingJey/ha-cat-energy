@@ -13,9 +13,10 @@ function getCoords(elem) {
 }
 
 if (baBar && baToggle && baBeforeImage && baAfterImage) {
+  var example = document.querySelector('.example');
+
   function baBackgroundPosition() {
-    var example = document.querySelector('.example');
-    var bgPos =  getCoords(baToggle).left - getCoords(example).left + baToggle.offsetWidth/2;
+    var bgPos =  getCoords(baToggle).left - getCoords(example).left +         baToggle.offsetWidth/2;
     example.style.backgroundPosition = bgPos + 'px 0, 0 0';
 
     var bgWidth = example.offsetWidth - bgPos;
@@ -63,5 +64,11 @@ if (baBar && baToggle && baBeforeImage && baAfterImage) {
     });
   });
 
-  baBackgroundPosition();
+  window.addEventListener("resize",function(){
+    baBackgroundPosition();
+  });
+
+
+
+  //baBackgroundPosition();
 }
