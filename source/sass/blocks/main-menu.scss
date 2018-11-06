@@ -19,7 +19,7 @@
       font-family: "Oswald", "Arial", sans-serif;
       font-size: 20px;
       line-height: 25px;
-      color: #ffffff;
+      color: #000000;
       text-transform: uppercase;
     }
 
@@ -29,8 +29,22 @@
       display: block;
       width: 100%;
       height: 2px;
-      background-color: #ffffff;
+      background-color: $main-color;
       top: 5px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--index-desktop {
+      .main-menu__item {
+        a {
+          color: #ffffff;
+        }
+
+        &--active a::after {
+          background-color: #ffffff;
+        }
+      }
     }
   }
 }
@@ -53,3 +67,43 @@
     }
   }
 }
+
+@media (max-width: $mobile-width) {
+  .main-menu {
+  &__toggle {
+    display: block;
+    position: absolute;
+  }
+
+  &__list {
+    list-style: none;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding-left: 35px;
+
+    a {
+      text-decoration: none;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 20px;
+      line-height: 25px;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    &--active a::after {
+      position: relative;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $main-color;
+      top: 5px;
+    }
+  }
+
+}
+
+}
+

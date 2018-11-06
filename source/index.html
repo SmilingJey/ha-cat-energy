@@ -19,33 +19,33 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header">
-      <div class="page-header__inner">
-        <div class="page-header__head">
-          <a class="page-header__logo">
-            <picture>
-              <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
-              <source media="(max-width: 1299px)" srcset="img/logo-tablet.svg">
-              <img src="img/logo-desktop.svg" alt="Cat Energy" width="202" height="60">
-            </picture>
-          </a>
-          <nav class="page-header__menu main-menu">
-            <input class="visually-hidden main-menu__toggle-check" type="checkbox" id="main-menu__toggle-check" name="main-menu__show-menu">
-            <label for="main-menu__toggle-check" class="main-menu__toggle"><span class="visually-hidden">Открыть меню</span></label>
-            <ul class="main-menu__list">
-              <li class="main-menu__item main-menu__item--active">
-                <a href="">Главная</a>
-              </li>
-              <li class="main-menu__item">
-                <a href="">Каталог продукции</a>
-              </li>
-              <li class="main-menu__item">
-                <a href="">Подбор программы</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="page-header__training training-promo">
+    <header class="page-header page-header">
+      <a class="page-header__logo">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+          <source media="(max-width: 1299px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-desktop.svg" alt="Cat Energy" width="202" height="60">
+        </picture>
+      </a>
+      <nav class="page-header__menu main-menu main-menu--index-desktop">
+        <input class="visually-hidden main-menu__toggle-check" type="checkbox" id="main-menu__toggle-check" name="main-menu__show-menu">
+        <label for="main-menu__toggle-check" class="main-menu__toggle"><span class="visually-hidden">Открыть меню</span></label>
+        <ul class="main-menu__list">
+          <li class="main-menu__item main-menu__item--active">
+            <a href="">Главная</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="">Каталог продукции</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--<main class="page-main">
+      <section class="training-promo">
+        <div class="training-promo__inner">
           <h1 class="training-promo__header">Функциональное<br> питание для котов</h1>
           <p class="training-promo__text">Занялся собой? Займись котом!</p>
           <div class="training-promo__image">
@@ -60,14 +60,13 @@
           </div>
           <a class="training-promo__button button" href="form.html">Подобрать программу</a>
         </div>
-      </div>
-    </header>
-    <main class="page-main">
+      </section>
+
       <section class="categories">
         <h2 class="visually-hidden">Категории товаров</h2>
         <div class="categories__item">
           <div class="categories__icon categories__icon--cat-slim">
-            <img src="img/icon-cat-slim.svg" alt="категория похудение" >
+            <img src="img/icon-cat-slim.svg" alt="категория похудение">
           </div>
           <h3>Похудение</h3>
           <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
@@ -75,7 +74,7 @@
         </div>
         <div class="categories__item">
           <div class="categories__icon categories__icon--cat-pro">
-            <img src="img/icon-cat-pro.svg" alt="категория похудение" >
+            <img src="img/icon-cat-pro.svg" alt="категория похудение">
           </div>
           <h3>Набор Массы</h3>
           <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
@@ -111,6 +110,7 @@
           </li>
         </ul>
       </section>
+
       <section class="example">
         <div class="example__inner">
           <div class="example__desc">
@@ -213,7 +213,7 @@
           </a>
         </p>
       </section>
-    </footer>
+    </footer> -->
     <script src="js/scripts.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg3_kj2bCeG3cxQWRRczYl1aCpbV5cKK4&callback=initMap"></script>
   </body>
