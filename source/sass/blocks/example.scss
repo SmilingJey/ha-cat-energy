@@ -2,7 +2,7 @@
   background-image: linear-gradient(to bottom, rgba(1, 1, 1, 0) 190px, #eaeaea 190px),
     linear-gradient(to bottom, rgba(1, 1, 1, 0) 190px, $color-grey 190px);
   background-position: calc(100% + 325px) 0, 0 0;
-  background-size: 50% auto, 100% auto;
+  background-size: 50% 100%, 100% 100%;
   background-repeat: no-repeat, no-repeat;
   margin-top: -40px;
 
@@ -141,6 +141,75 @@
 
     &__images {
       margin: 0 auto 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .example {
+    background-color: $color-grey;
+    background-image: none;
+    margin-top: 50px;
+
+    &__inner {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 0;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 60px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &__result {
+      justify-content: space-between;
+    }
+
+    &__result-box {
+      min-width: 124px;
+      min-height: 55px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &__result-name {
+      width: 86px;
+      white-space: normal;
+      text-align: center;
+      background-color: $color-grey;
+      font-size: 12px;
+      line-height: 12px;
+      bottom: -15px;
+    }
+
+    &__result-value {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    &__result-price {
+      font-size: 14px;
+      line-height: 20px;
+      margin-right: auto;
+
+      span {
+        display: inline;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &__images {
+      position: relative;
+      width: 280px;
     }
   }
 }

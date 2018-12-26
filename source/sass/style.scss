@@ -13,7 +13,7 @@
 
 @font-face {
   font-weight: bold;
-  font-family: "Oswald Medium";
+  font-family: "Oswald";
   font-style: normal;
 
   font-display: swap;
@@ -69,3 +69,8 @@ img {
 @import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
+@import "blocks/catalog.scss";
+@import "blocks/product-card.scss";
+@import "blocks/show-all.scss";
+@import "blocks/more-items.scss";
+@import "blocks/gift-promo.scss";

@@ -20,7 +20,7 @@ if (baBar && baToggle && baBeforeImage && baAfterImage) {
     example.style.backgroundPosition = bgPos + 'px 0, 0 0';
 
     var bgWidth = example.offsetWidth - bgPos;
-    example.style.backgroundSize = bgWidth + 'px auto, 100% auto';
+    example.style.backgroundSize = bgWidth + 'px 100%, 100% 100%';
   }
 
   baToggle.addEventListener("mousedown", function(evt){
@@ -44,8 +44,6 @@ if (baBar && baToggle && baBeforeImage && baAfterImage) {
 
       var percent = newLeft / max;
 
-      console.log("baBeforeImageCoords.left " + baBeforeImageCoords.left);
-      console.log("barCoords.left " + barCoords.left);
       baBeforeImage.style.width = barCoords.left - baBeforeImageCoords.left +
                                   newLeft + baToggle.offsetWidth/2 + 'px';
 
@@ -68,7 +66,5 @@ if (baBar && baToggle && baBeforeImage && baAfterImage) {
     baBackgroundPosition();
   });
 
-
-
-  //baBackgroundPosition();
+  baBackgroundPosition();
 }

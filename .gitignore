@@ -9,6 +9,7 @@
 node_modules/
 build/
 docs/
+backup/
 npm-debug.*
 source/css/*.css
 Thumbs.db

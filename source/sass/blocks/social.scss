@@ -9,3 +9,14 @@
     margin: 0 15px;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .social {
+    justify-content: center;
+
+    &__item {
+      transform: scale(0.6);
+      margin: 0 17px;
+    }
+  }
+}

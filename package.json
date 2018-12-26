@@ -6,12 +6,14 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.1.x",
-    "browser-sync": "2.24.x",
+    "browser-sync": "^2.26.3",
+    "deep-extend": ">=0.5.1",
     "del": "^3.0.0",
     "gulp": "4.0.x",
     "gulp-cheerio": "^0.6.3",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
+    "gulp-exclude-gitignore": "^1.2.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "1.2.x",
@@ -22,9 +24,10 @@
     "gulp-svgstore": "^7.0.0",
     "gulp-uglify-es": "^1.0.4",
     "gulp-webp": "^3.0.0",
+    "gulp-zip": "^4.2.0",
+    "moment": "^2.22.2",
     "posthtml-include": "^1.2.0",
-    "stylelint": "9.6.x",
-    "deep-extend": ">=0.5.1"
+    "stylelint": "9.6.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

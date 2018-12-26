@@ -22,3 +22,12 @@
     color: rgba(255, 255, 255, 0.3);
   }
 }
+
+@media (max-width: $mobile-width) {
+  .button {
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}

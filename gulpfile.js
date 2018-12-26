@@ -17,7 +17,11 @@ var uglify = require('gulp-uglify-es').default;
 var concat = require('gulp-concat');
 var del = require('del');
 var cheerio = require('gulp-cheerio');
-const htmlmin = require('gulp-htmlmin');
+var htmlmin = require('gulp-htmlmin');
+var zip = require('gulp-zip');
+var moment = require('moment');
+var excludeGitignore = require('gulp-exclude-gitignore');
+var log = require('fancy-log');
 
 /************************** BUILD CSS **************************************/
 gulp.task('css', function () {
@@ -215,3 +219,17 @@ gulp.task('server', function () {
 gulp.task('build', gulp.series('clean', 'fonts', 'img', 'svg', 'html', 'css', 'js'));
 gulp.task('build-no-img', gulp.series('clean-no-img', 'fonts', 'svg', 'html', 'css', 'js'));
 gulp.task('start', gulp.series('build-no-img', 'server'));
+
+/************************** BACKUP *************************************/
+gulp.task('backup', function () {
+    var currentDate = moment().format('YYYY-MM-DD HH_mm');
+    var folderName = __dirname.substring(__dirname.lastIndexOf('\\')+1);
+    var backUpName = folderName + " " + currentDate + '.zip';
+    var copyPath = 'd:/GoogleDrive/backup/';
+    return gulp.src(['./*.*','source/**'], {base: './'})
+        //.pipe(excludeGitignore())
+        .pipe(zip(backUpName))
+        .pipe(gulp.dest('backup/'))
+        .pipe(gulp.dest(copyPath))
+        .on('end', () => log('Backup done! File name ' + backUpName));
+});

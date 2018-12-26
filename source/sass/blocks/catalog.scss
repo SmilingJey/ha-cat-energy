@@ -1,0 +1,29 @@
+.catalog {
+  margin: 0 auto 10px;
+  max-width: 1300px;
+
+  &__header {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: normal;
+    margin-top: 55px;
+    margin-left: 40px;
+    margin-bottom: 85px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 245px;
+    margin: 0 40px 60px 40px;
+  }
+}

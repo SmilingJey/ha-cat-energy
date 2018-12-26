@@ -88,3 +88,81 @@
     }
   }
 }
+
+@media (max-width: $mobile-width) {
+  .before-after {
+    position: relative;
+    padding-bottom: 100px;
+
+    &__before {
+      position: absolute;
+      width: 145px;
+      overflow: hidden;
+
+      img {
+        max-width: none;
+        width: 280px;
+      }
+    }
+
+    &__after {
+      overflow: hidden;
+      width: 135px;
+      float: right;
+
+      img {
+        float: right;
+        max-width: none;
+        width: 280px;
+      }
+    }
+
+    &__label {
+      position: absolute;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: "Oswald", "Arial", sans-serif;
+      text-transform: uppercase;
+
+      &--before {
+        left: 45px;
+        bottom: 25px;
+      }
+
+      &--after {
+        right: 40px;
+        bottom: 25px;
+      }
+    }
+
+    &__control {
+      position: absolute;
+      bottom: 45px;
+      left: 100px;
+    }
+
+    &__bar {
+      position: relative;
+      width: 84px;
+      height: 14px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      border: 1px solid #cdcdcd;
+    }
+
+    &__toggle {
+      display: none;
+    }
+
+    &__bar-value {
+      position: absolute;
+      width: 35px;
+      height: 6px;
+      background-color: $main-color;
+      border-radius: 2px;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

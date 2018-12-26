@@ -1,29 +1,39 @@
 .page-header {
-  height: 120px;
-  max-width: 1300px;
-  margin: 0 auto 0;
-
   display: flex;
   justify-content: space-between;
+  max-width: 1300px;
+  min-height: 120px;
+  margin: 0 auto 0;
+  padding-top: 35px;
+  padding-right: 40px;
+  padding-left: 40px;
+
+  &__logo {
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
 
   &__menu {
-    margin-top: 20px;
     max-width: 50%;
+    margin-top: 35px;
   }
 }
 
 @media (max-width: $tablet-width) {
   .page-header {
-    padding-left: 30px;
     padding-right: 30px;
+    padding-left: 30px;
 
     &__logo {
-      width: 175px;
-      height: auto;
+      img {
+        width: 175px;
+        height: auto;
+      }
     }
 
     &__menu {
-      margin-top: 15px;
       max-width: none;
     }
   }
@@ -31,11 +41,26 @@
 
 @media (max-width: $mobile-width) {
   .page-header {
+    display: block;
     padding: 0;
-    flex-direction: column;
+    min-height: auto;
 
     &__logo {
+      display: block;
+      margin: 0;
+      padding: 0;
+      min-height: 65px;
       padding-left: 20px;
+      padding-top: 12px;
+
+      img {
+        width: 190px;
+        height: auto;
+      }
+    }
+
+    &__menu {
+      margin-top: -65px;
     }
   }
 }
