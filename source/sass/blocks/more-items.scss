@@ -28,7 +28,7 @@
     &::before {
       width: 100%;
       transform: translateX(-100%) translateX(-40px);
-      top: 50%;
+      top: 45%;
       position: absolute;
     }
 
@@ -36,7 +36,7 @@
       position: absolute;
       width: 100%;
       transform: translateX(40px);
-      top: 50%;
+      top: 45%;
     }
   }
 
@@ -61,7 +61,6 @@
     border-top: 1px solid #cdcdcd;
     padding-top: 16px;
     padding-bottom: 15px;
-
 
     &:last-child {
       border-bottom: 1px solid #cdcdcd;
@@ -94,5 +93,127 @@
     padding-top: 10px;
     padding-bottom: 10px;
     height: 40px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .more-items {
+    &__header {
+      padding-top: 0;
+      padding-left: 68px;
+
+      &::before {
+        transform: translateX(-100%) translateX(-38px);
+      }
+
+      &::after {
+        transform: translateX(38px);
+      }
+    }
+
+    &__list {
+      width: 100%;
+    }
+
+    &__inner {
+      flex-direction: column;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__item {
+      flex-wrap: wrap;
+      border: 1px solid #cdcdcd;
+      border-bottom: none;
+      padding-left: 38px;
+      padding-right: 38px;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    &__name {
+      width: 345px;
+    }
+
+    &__count {
+      margin: 0;
+      width: 192px;
+      text-align: end;
+    }
+
+    &__price {
+      margin-left: auto;
+      width: auto;
+    }
+
+    &__button {
+      margin-top: 25px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .more-items {
+    margin-bottom: 40px;
+
+    &__header {
+      margin-top: 20px;
+      margin-bottom: 25px;
+      font-size: 24px;
+      line-height: 24px;
+      padding-left: 20px;
+
+      &::after {
+        transform: translateX(25px);
+      }
+    }
+
+    &__inner {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__item {
+      border-top: 1px solid #cdcdcd;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      &:last-child {
+        border-bottom: 1px solid #cdcdcd;
+      }
+    }
+
+    &__name {
+      font-size: 16px;
+      line-height: 16px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    &__count {
+      margin: 0;
+      width: 192px;
+      text-align: start;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    &__price {
+      margin-left: auto;
+      width: auto;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__button {
+      margin-top: 14px;
+      width: 100%;
+    }
   }
 }

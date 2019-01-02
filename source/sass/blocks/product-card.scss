@@ -4,6 +4,7 @@
   &__image {
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     min-height: 215px;
   }
 
@@ -65,5 +66,70 @@
     font-family: "Oswald", "Arial", sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .product-card {
+    background-image: none;
+
+    border-top: 1px solid #ededed;
+
+    &__image {
+      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(50% - 20px);
+      margin-left: 20px;
+      height: auto;
+      min-height: 0;
+      line-height: 0;
+    }
+
+    &__name {
+      margin: 0;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    &__weight {
+      margin: 0;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: left;
+    }
+
+    &__table {
+      margin: 0;
+      margin-bottom: 0;
+      width: calc(50% - 20px);
+      border-collapse: collapse;
+    }
+
+    &__table-row {
+      border-bottom: none;
+    }
+
+    &__table-header {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 0;
+    }
+
+    &__table-data {
+      font-size: 12px;
+      line-height: 16px;
+      text-align: right;
+      padding: 0;
+    }
+
+    &__button {
+      margin: 0 20px 24px;
+      width: calc(100% - 40px);
+    }
   }
 }
