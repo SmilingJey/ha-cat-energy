@@ -7,6 +7,14 @@
 
   &__item {
     margin: 0 15px;
+
+    &:hover {
+      fill: $main-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 

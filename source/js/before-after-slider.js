@@ -1,3 +1,5 @@
+'use strict';
+
 var baBar = document.querySelector('.before-after__bar');
 var baToggle = document.querySelector('.before-after__toggle');
 
@@ -16,7 +18,7 @@ if (baBar && baToggle && baBeforeImage && baAfterImage) {
   var example = document.querySelector('.example');
 
   function baBackgroundPosition() {
-    var bgPos =  getCoords(baToggle).left - getCoords(example).left +         baToggle.offsetWidth/2;
+    var bgPos =  getCoords(baToggle).left - getCoords(example).left + baToggle.offsetWidth/2;
     example.style.backgroundPosition = bgPos + 'px 0, 0 0';
 
     var bgWidth = example.offsetWidth - bgPos;
@@ -42,14 +44,10 @@ if (baBar && baToggle && baBeforeImage && baAfterImage) {
       var baBeforeImageCoords = getCoords(baBeforeImage);
       var baAfterImageCoords = getCoords(baAfterImage);
 
-      var percent = newLeft / max;
-
       baBeforeImage.style.width = barCoords.left - baBeforeImageCoords.left +
                                   newLeft + baToggle.offsetWidth/2 + 'px';
 
-      baAfterImage.style.width = baAfterImageCoords.left + baAfterImage.offsetWidth -
-                                 (barCoords.left + baBar.offsetWidth) + baBar.offsetWidth -
-                                  newLeft - baToggle.offsetWidth/2 + 'px';
+      baAfterImage.style.width = baAfterImageCoords.left + baAfterImage.offsetWidth - (barCoords.left + baBar.offsetWidth) + baBar.offsetWidth - newLeft - baToggle.offsetWidth/2 + 'px';
 
       baBackgroundPosition();
     }

@@ -103,6 +103,14 @@
       &--active a::after {
         display: none;
       }
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
 
     &__toggle-check:checked ~ .main-menu__toggle {

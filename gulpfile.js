@@ -71,6 +71,7 @@ var svgSpriteImages = [
   'build/img/icon-vk.svg',
   'build/img/icon-vk-mobile.svg',
   'build/img/icon-mail.svg',
+  'build/img/icon-phone.svg',
 ];
 
 gulp.task('svgsprite', function () {
@@ -154,6 +155,7 @@ gulp.task('jscopy', function () {
 
 var concatScripts = [
   'build/js/google-map.js',
+  'build/js/yandex-map.js',
   'build/js/before-after-slider.js'
 ];
 

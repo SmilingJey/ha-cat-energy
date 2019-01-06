@@ -12,32 +12,9 @@
     font-size: 36px;
     line-height: 36px;
     font-weight: normal;
-    position: relative;
     padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-
-    &::before,
-    &::after {
-      content: "";
-      display: inline-block;
-      height: 3px;
-      background-color: $main-color;
-    }
-
-    &::before {
-      width: 100%;
-      transform: translateX(-100%) translateX(-40px);
-      top: 45%;
-      position: absolute;
-    }
-
-    &::after {
-      position: absolute;
-      width: 100%;
-      transform: translateX(40px);
-      top: 45%;
-    }
   }
 
   &__inner {

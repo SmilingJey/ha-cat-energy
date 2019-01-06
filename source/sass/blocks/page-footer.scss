@@ -2,17 +2,25 @@
   background-color: $color-grey;
 
   &__links {
-    max-width: 1300px;
-    margin: 0 auto;
     display: flex;
-    padding: 50px 40px 30px;
     justify-content: space-between;
     align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 40px 30px;
   }
 
   &__logo {
-    margin-left: 0;
     width: 200px;
+    margin-left: 0;
+
+    a:hover {
+      opacity: 0.6;
+    }
+
+    a:active {
+      opacity: 0.3;
+    }
   }
 
   &__social {
@@ -25,15 +33,24 @@
   }
 
   &__copyright-link {
-    float: right;
-    text-decoration: none;
-    color: $color-footer;
-
     display: flex;
     align-items: center;
+    float: right;
+    color: $color-footer;
+    text-decoration: none;
 
     span {
       margin-right: 15px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+
+      fill: $main-color;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
@@ -43,8 +60,8 @@
   .page-footer {
     &__links {
       padding-top: 40px;
-      padding-left: 30px;
       padding-right: 30px;
+      padding-left: 30px;
     }
   }
 }
@@ -52,20 +69,20 @@
 @media (max-width: $mobile-width) {
   .page-footer {
     &__links {
-      margin: 0;
       flex-wrap: wrap;
-      padding: 0;
       justify-content: center;
-      padding-left: 20px;
-      padding-right: 20px;
+      margin: 0;
+      padding: 0;
       padding-top: 25px;
+      padding-right: 20px;
+      padding-left: 20px;
     }
 
     &__logo {
       flex-grow: 1;
       width: 100%;
-      text-align: center;
       padding-bottom: 25px;
+      text-align: center;
       border-bottom: 1px solid #d9d9d9;
     }
 
@@ -83,8 +100,8 @@
     }
 
     &__copyright-link {
-      width: 100%;
       justify-content: space-between;
+      width: 100%;
     }
   }
 }

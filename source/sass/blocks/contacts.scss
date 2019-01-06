@@ -1,24 +1,24 @@
 .contacts {
-  position: relative;
-
   &__box-wrapper {
-    position: absolute;
-    top: 0;
+    position: relative;
+    //top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    //bottom: 0;
     z-index: 1;
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
-    padding: 100px 40px 100px;
   }
 
   &__box {
+    position: absolute;
     width: 570px;
     background-color: #ffffff;
     padding: 45px 70px 40px;
     display: flex;
+    top: 100px;
+    left: 40px;
 
     h2 {
       font-weight: normal;
@@ -71,7 +71,7 @@
       width: 100%;
       position: static;
       padding-top: 50px;
-      background-color: $color-grey;
+      background-color: #ffffff;
 
       p {
         margin-left: auto;
